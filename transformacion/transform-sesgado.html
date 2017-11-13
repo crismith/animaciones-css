@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sesgado </title>
+	<style>
+		body{
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			height: 100vh;
+			color: #4dbf3a;
+		}
+		.container{
+			border:  1px solid #4dbf3a;
+		}
+		.container:hover .cuadrado{
+			/*
+			transform: skew(x,y);
+			transform: skew(45deg);
+			transform: skew(65deg,45deg);
+			*/
+			transform: skew(15deg,15deg);
+		}
+
+		.cuadrado{
+			border-radius: 5px;
+			width: 200px;
+			height: 200px;
+			margin: 50px;
+			background: linear-gradient(30deg, #1c1e1f, #32323f);
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			transition: 2s;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="cuadrado">
+			<p>Aumentando el tamaño :)</p>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

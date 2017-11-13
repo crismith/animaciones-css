@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Jugando con modal</h1>
+	<button class="btn mostrar" id="mostrar">Mostrar Modal</button>
+
+	<div class="overlay active" id="overlay">
+		<div class="modal " id="modal">
+			<h1>Hola es Mi modal</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem impedit ex repudiandae molestiae dolor, itaque expedita adipisci nisi eligendi deserunt asperiores, rem magni, obcaecati velit earum ipsam nam sed! Incidunt.</p>
+			<div class="butons">
+				<button class="btn primary" id="btn-hide"> Me Gusto :)</button>
+				<button class="btn warning" id="btn-exit"> No me gusto :(</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const $buttonShow = document.getElementById('mostrar');
+
+		$buttonShow.addEventListener('click',mostrarModal)
+
+		function mostrarModal (event) {
+			$modal.style.animation = 'modalIn 1s forwards';
+			
+		}
+
+
+		const $buttonHide = document.getElementById('btn-hide');
+		const $modal = document.getElementById('modal');
+		const $overlay = document.getElementById('overlay');
+
+		$buttonHide.addEventListener('click', (event) =>{
+			//console.log(event);
+			$modal.style.animation = 'modalOut .8s forwards';
+			$overlay.classList.remove('active');
+			/*
+				add sirve para agregar la clase
+				$overlay.classList.add('active');
+			*/
+		})
+	</script>
+</body>
+</html>

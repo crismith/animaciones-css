@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rotacion</title>
+	<style>
+		body{
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			height: 100vh;
+			color: #4dbf3a;
+		}
+		.container{
+			border:  1px solid #4dbf3a;
+		}
+		.container:hover .cuadrado{
+			/*
+			transform-origin: (x,y);
+			transform-origin: left top;
+			transform-origin: right top;
+			transform-origin: left bottom;
+			transform-origin: right bottom;
+			*/
+			transform-origin: 75% 75%;
+			transform: rotateZ(45deg);
+		}
+
+		.cuadrado{
+			border: 1px solid #4dbf3a;
+			border-radius: 9px;
+			width: 300px;
+			height: 300px;
+			margin: 50px;
+			background: linear-gradient(30deg, #1c1e1f, #006699);
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			transition: 1s;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="cuadrado">
+			<p>Rotando :)</p>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

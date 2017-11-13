@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modal</title>
+	<link rel="stylesheet" href="modal.css">
+</head>
+<body>
+	<h1>Jugando con Animaciones</h1>
+	<button class="btn mostrar" id="mostrar">Mostrar Modal</button>
+
+	<div class="overlay" id="overlay">
+		<div>
+			<button class="btn cerrar" id="cerrar">X</button>
+		</div>
+		<div class="modal " id="modal">
+			<h1>Hola es Mi modal</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem impedit ex repudiandae molestiae dolor, itaque expedita adipisci nisi eligendi deserunt asperiores, rem magni, obcaecati velit earum ipsam nam sed! Incidunt.</p>
+
+			<div class="butons">
+				<button class="btn primary" id="btn-hide"> Me Gusta :)</button>
+				<button class="btn warning" id="btn-exit"> No me gusta :(</button>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const $buttonShow = document.getElementById('mostrar');
+
+		const $buttonHide = document.getElementById('cerrar');
+
+		const $overlay = document.getElementById('overlay');
+		const $modal = document.getElementById('modal');
+
+		$buttonShow.addEventListener('click',mostrarModal);
+
+		$buttonHide.addEventListener('click',cerrarModal);
+
+		function mostrarModal () {
+			$overlay.style.animation = 'modalIn .8s forwards';
+			$overlay.classList.add('active');
+		}
+
+		function cerrarModal () {
+			console.log('se cerro');
+			$modal.style.animation = 'modalOut .8s forwards';
+			$overlay.classList.remove('active');
+		}
+
+	</script>
+</body>
+</html>

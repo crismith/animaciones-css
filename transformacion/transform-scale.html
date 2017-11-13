@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scale</title>
+	<style>
+		body{
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			height: 100vh;
+			color: #4dbf3a;
+		}
+		.container{
+			border:  1px solid #4dbf3a;
+		}
+		.container:hover .cuadrado{
+			/*
+			transform: scale(x,y);
+			transform: scale(0 = = 0% tamaño => 1 = 100%  tamaño);
+			transform: scale(.5);
+			*/
+			transform: scale(1.5 , 2);
+		}
+
+		.cuadrado{
+			border-radius: 5px;
+			width: 200px;
+			height: 200px;
+			margin: 50px;
+			background: linear-gradient(30deg, #1c1e1f, #32323f);
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			transition: 2s;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="cuadrado">
+			<p>Aumentando el tamaño :)</p>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

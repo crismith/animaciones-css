@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>like-twitter</title>
+	<style>
+		body{
+			display: flex;
+			aligns-items:center;
+			justify-content: center;
+			height: 100px;
+		}
+		.like{
+			width: 200px;
+			height: 200px;
+			background: red;
+			animation: like .8s;
+			animation-timing-function: steps(8);
+			animation-fill-mode: forwards;
+		}
+		@keyframes like{
+			0%{
+				transform: translateX(-30px);
+			}
+			100%{
+				transform: translateX(401px)
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="uno">
+		<div class="like"></div>
+	</div>
+	
+</body>
+</html>

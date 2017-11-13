@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pelota</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			display: flex;
+			align-items:center;
+			justify-content: center;
+			height: 100vh;
+		}
+		.pelota{
+			width: 100px;
+			height: 100px;
+			background: red;
+			border-radius: 50%;
+			display: flex;
+			color: #fff;
+			font-size: 23px;
+			align-items:center;
+			justify-content: center;
+			position: absolute;
+			transition:1s;
+		}
+
+		.a{
+			width: 100px;
+			height: 100px;
+			background: red;
+			left: 0;
+		}
+		
+		.b{
+			width: 100px;
+			height: 100px;
+			background: orange;
+			right: 0;
+		}
+		.canasta{
+			width: 100%;
+			height: 100px;
+			position: relative;
+			/*transform:rotacion | sesgar | posicion | tamaño*/
+			transform:rotate(8deg) skew(15deg) translate(1px) scale(1); 
+			border: 1px solid blue;
+		}
+		.canasta:hover .a{
+			left: calc(50% - 100px)
+		}
+		.canasta:hover .b{
+			right: calc(50% - 100px)
+
+		}
+	</style>
+</head>
+<body>
+	<div class="canasta">
+		<div class="pelota a"> Hola</div>
+		<div class="pelota b"> Mundo</div>
+	</div>
+								
+</body>
+</html>
