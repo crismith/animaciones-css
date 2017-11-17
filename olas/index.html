@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Olitas</title>
+	<style>
+		body{
+			margin: 0;
+		}
+		.container{
+			height: 500px;
+			background:#197ab1;
+			position: relative;
+			display: flex;
+			align-items:center;
+			justify-content: center;
+		}
+		.context{
+			text-align: center;
+			font-size: 2em;
+			color: rgba(255,255,255, .8);
+		}
+		.waves{
+			position: absolute;
+			bottom: -135px;
+			height: 527px;
+			width: 100%;
+			overflow: hidden;
+		}
+		.wave{
+			position: absolute;
+			left: -160px;
+			bottom: 0;
+			width: 1550px;
+			height: 500px;
+			background: url(h.jpg) center bottom no-repeat;
+			animation:5s waves ease-in-out infinite alternate;
+		}
+	
+		.wave.a {
+			background-position: 0 -500px;
+		}
+		.wave.b {
+			background-position: 0 -250px;
+			animation-delay: .6s;
+		}
+		.wave.c {
+			background-position: 0 0;
+			animation-delay: 1.2s;
+		}
+
+		@keyframes waves{
+			0%{
+				transform:translate(0 , 0);
+			}
+			50%{
+				transform:translate(-80px , 30px);
+
+			}
+			100%{
+				transform:translate(160px , -30px);
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="context">
+			<h1>Bienvenido al mar</h1>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore a magnam, facere nihil, ad harum 
+			</p>
+		</div>
+		<div class="waves">
+			<div class="wave a"></div>
+			<div class="wave b"></div>
+			<div class="wave c"></div>
+		</div>
+	</div>
+
+</body>
+</html>
